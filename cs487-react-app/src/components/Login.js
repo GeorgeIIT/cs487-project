@@ -77,7 +77,7 @@ const Login=()=>{
                         
                     </form>
                     <form noValidate autoComplete="off" onSubmit={handleCreate} style={{padding: 8}}>
-                        <Button type='Create' variant='outlined' color='primary'>
+                        <Button type='Create' variant='outlined' color='primary' href="/SignUp">
                             Create Account
                         </Button>
                     </form>

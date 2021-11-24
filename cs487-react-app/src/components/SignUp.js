@@ -80,6 +80,9 @@ const SignUp=()=>{
                         <Button type='Create' variant='contained' color='primary'>
                             Sign Up
                         </Button>
+                        <Button type='Create' variant='contained' color='primary' href="/AddCourse">
+                            Add Courses
+                        </Button>
                     </form>
                 </Paper>
             </Grid>
