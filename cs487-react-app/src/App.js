@@ -4,11 +4,12 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import AddCourse from './components/AddCourse';
 import MyCourseList from './components/MyCourseList';
+import Connections from './components/Connections';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom' 
 
 const App=()=> {
   const [courses, setCourses] = useState(['CS 551 Operating System Design and Implementation', 'CS 411 Computer Graphics', 'CS 542 Computer Networks I: Fundamental']);
-  const [classesBeingTaken, setClassesBeingTaken] = useState(['CS 551 Operating System Design and Implementation']);
+  const [classesBeingTaken, setClassesBeingTaken] = useState(['CS 551 Operating System Design and Implementation', 'CS 411 Computer Graphics']);
  
   const onDelete = (courseName) => {
     const newCourses = classesBeingTaken.filter(course => course !== courseName);
@@ -43,7 +44,10 @@ const App=()=> {
             <AddCourse onAdd={onAdd} courses={courses}/>
           </Route>
           <Route exact path="/MyCourseList"> 
-            <MyCourseList onDelete = {onDelete} setCourses={setCourses} classesBeingTaken={classesBeingTaken}/>
+            <MyCourseList onDelete = {onDelete} setCourses={setCourses} classesBeingTaken={classesBeingTaken} setClassesBeingTaken={setClassesBeingTaken}/>
+          </Route>
+          <Route exact path="/Connections"> 
+            <Connections/>
           </Route>
         </Switch>
       </div>
